@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #e5e5e5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        background-color: #f9f9ff;
+        width: 1000px;
+        padding: 30px;
+        margin-top: 20px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .datacontainer {
+        display: none;
+        margin-top: 20px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+      }
+      .radio-group {
+        margin-bottom: 15px;
+      }
+      .radio-group label {
+        margin-right: 15px;
+        cursor: pointer;
+      }
+      .active {
+        display: block;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="title">Your Body Mass Index Calculator</h2>
+
+      <!-- Standard/Metric Toggle  -->
+      <div class="radio-group">
+        <input
+          type="radio"
+          id="Standard-radio"
+          name="form-selector"
+          value="Standard"
+          checked
+        />
+        <label for="standard-radio">Standard</label>
+        <input
+          type="radio"
+          id="Metrix-radio"
+          name="form-selector"
+          value="Metrix"
+        />
+        <label for="Metrix-radio">Metrix</label>
+      </div>
+      <div id="Standard" class="datacontainer active">
+        <!-- Weight -->
+        <div class="standardcontainer">
+          <div class="weightcontainer">
+            <div class="weight">Weight</div>
+            <input type="text" id="lbs" />
+            <label>lbs</label>
+          </div>
+
+          <!-- Height -->
+          <div class="heightcontainer">
+            <div class="height">Height</div>
+            <div class="heightdata">
+              <div class="feetdata">
+                <input type="text" id="feet" />
+                <label>feet</label>
+              </div>
+              <div class="inchesdata">
+                <input type="text" id="inches" />
+                <label>inches</label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Calculate -->
+        <button class="calculate">Calculate</button>
+
+        <div class="resultcontainer">
+          <!-- Result -->
+          <div class="result">Your BMI result is 0</div>
+          <div class="resulttable">
+            <table border="1">
+              <tr>
+                <td class="severelyUnderweight">
+                  <p>less than 16</p>
+                </td>
+                <td>Severely Underweight</td>
+              </tr>
+              <tr>
+                <td class="underweight">
+                  <p>12-18.5</p>
+                </td>
+                <td>Underweight</td>
+              </tr>
+              <tr>
+                <td class="healthyWeight">
+                  <p>18.6-25</p>
+                </td>
+                <td>Healthy Weight</td>
+              </tr>
+              <tr>
+                <td class="overWeight">
+                  <p>25-30</p>
+                </td>
+                <td>Overweight</td>
+              </tr>
+              <tr>
+                <td class="moderatelyObese">
+                  <p>30-35</p>
+                </td>
+                <td>Moderately Obese</td>
+              </tr>
+              <tr>
+                <td class="severelyObese">
+                  <p>35-40</p>
+                </td>
+                <td>Severely Obese</td>
+              </tr>
+              <tr>
+                <td class="morbidlyObese">
+                  <p>more than 40</p>
+                </td>
+                <td>Morbidly Obese</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div id="Metrix" class="datacontainer">
+      <!-- Weight -->
+      <div class="metrixcontainer">
+        <div class="weightcontainer">
+          <div class="weight">Weight</div>
+          <input type="text" id="kg" />
+          <label>Kg</label>
+        </div>
+
+        <!-- Height -->
+        <div class="heightcontainer">
+          <div class="height">Height</div>
+          <input type="text" id="m" />
+          <label>Metre</label>
+        </div>
+      </div>
+
+      <!-- Calculate -->
+      <button class="calculate">Calculate</button>
+
+      <div class="resultcontainer">
+        <!-- Result -->
+        <div class="result">Your BMI result is 0</div>
+        <div class="resulttable">
+          <table border="1">
+            <tr>
+              <td class="severelyUnderweight">
+                <p>less than 16</p>
+              </td>
+              <td>Severely Underweight</td>
+            </tr>
+            <tr>
+              <td class="underweight">
+                <p>12-18.5</p>
+              </td>
+              <td>Underweight</td>
+            </tr>
+            <tr>
+              <td class="healthyWeight">
+                <p>18.6-25</p>
+              </td>
+              <td>Healthy Weight</td>
+            </tr>
+            <tr>
+              <td class="overWeight">
+                <p>25-30</p>
+              </td>
+              <td>Overweight</td>
+            </tr>
+            <tr>
+              <td class="moderatelyObese">
+                <p>30-35</p>
+              </td>
+              <td>Moderately Obese</td>
+            </tr>
+            <tr>
+              <td class="severelyObese">
+                <p>35-40</p>
+              </td>
+              <td>Severely Obese</td>
+            </tr>
+            <tr>
+              <td class="morbidlyObese">
+                <p>more than 40</p>
+              </td>
+              <td>Morbidly Obese</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const StandardRadio = document.getElementById("Standard-radio");
+      const MetrixRadio = document.getElementById("Metrix-radio");
+
+      const Standard = document.getElementById("Standard");
+      const Metrix = document.getElementById("Metrix");
+
+      function toggleForms() {
+        if (StandardRadio.checked) {
+          Standard.classList.add("active");
+          Metrix.classList.remove("active");
+        } else {
+          Standard.classList.remove("active");
+          Metrix.classList.add("active");
+        }
+      }
+
+      StandardRadio.addEventListener("change", toggleForms);
+      MetrixRadio.addEventListener("change", toggleForms);
+    </script>
+  </body>
+</html>
